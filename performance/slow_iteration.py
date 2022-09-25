@@ -20,7 +20,9 @@ for daily_performance in queryset:
 
 # Implement this with celery task
 
-app = Celery('tasks', broker='redis://localhost:6379/0')
+# app = Celery('tasks', broker='redis://localhost:6379/0')
+# using RabbitMQ as broker
+app = Celery('tasks', broker='amqp://guest@localhost//')
 
 
 @app.task

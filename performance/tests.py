@@ -42,6 +42,6 @@ class DailyPerformanceTestCase(TestCase):
 
     def test_filter_by_min_roi(self):
         self.assertEqual(
-            DailyPerformance.filter_by_min_roi(0.5).count(),
+            DailyPerformance.objects.filter_by_min_roi(0.5).count(),
             1,
         )

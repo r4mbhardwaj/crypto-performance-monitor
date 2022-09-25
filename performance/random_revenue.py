@@ -10,7 +10,7 @@ from .models import *
 
 
 # Create a queryset with all the daily performance where the roi > 50%
-queryset = DailyPerformance.filter_by_min_roi(min_roi=0.5)
+queryset = DailyPerformance.objects.filter_by_min_roi(min_roi=0.5)
 print(queryset.count())
 print(queryset.count() * 2)
 
